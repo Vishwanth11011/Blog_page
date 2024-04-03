@@ -1,0 +1,58 @@
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    }
+    body{
+        background-color: #c9d6ff;
+    background: linear-gradient(to right, #6464b3, #03279d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 35px;
+    height: 100vh;
+    }
+    .form-group{
+        margin-top: 25px;
+    }
+    .btn{
+        background: linear-gradient(to right, #373738, #06060d);
+        color: #fff;
+        font-size: 12px;
+        padding: 10px 14px;
+        margin-left: 20px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        font-weight: 600;
+        box-shadow: #03279d;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-top: 10px;
+        cursor: pointer;
+        font-family:'Rubik', sans-serif ;
+    }
+    .bth-primary{
+        background: linear-gradient(to right, #579061, #0ae951);
+    }
+    a{
+        text-decoration: none;
+    }
+    </style>
+<div class="form-group">
+    <label for="title">Title</label>
+    <input required value="<%=article.title%>" type="text" name="title" class="form-control">
+</div>
+<div class="form-group">
+    <label for="description">Description</label>
+    <textarea name="description" id="description" class="form-control"><%=article.description%></textarea>
+</div>
+<div class="form-group">
+    <label for="markdown">Markdown</label>
+    <textarea required name="markdown" id="markdown" class="form-control"><%=article.markdown%></textarea>
+</div>
+<br>
+<a href="/" class="btn btn-secondary">Cancel</a>
+<button type="submit" class="btn-primary btn">Save</button>
